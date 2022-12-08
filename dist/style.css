@@ -9,7 +9,6 @@
 }
   
 * {
-  border: 1px dotted red;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23,10 +22,11 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  border-bottom: 2px solid  rgb(217, 229, 255);
   height: 15%;
-  background-color: rgb(217, 229, 255);
+  background-color: rgb(54, 10, 10);
 }
 
 .logo-container {
@@ -40,10 +40,11 @@
 .logo {
   height: 250px;
   width: 250px;
+  z-index: 1;
 }
 
 .name-container {
-  color: rgb(14, 34, 100);
+  color: rgb(217, 229, 255);
   font-family: BlackBerryJam;
   font-size: 90px;
   text-align: center;
@@ -58,7 +59,7 @@
   align-items: center;
   font-family: Brisket;
   font-size: 35px;
-  color: rgb(14, 34, 100);
+  color: rgb(217, 229, 255);
   margin-top: 50px;
   line-height: 80px;
   height: 75px;
@@ -70,6 +71,9 @@
   height: 50px;
   width: 100px;
   cursor: pointer;
+  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+  text-underline-offset: 6px;
+  transition: text-decoration-color 400ms;
 }
 
 .nav-menu {
@@ -77,6 +81,9 @@
   height: 50px;
   width: 100px;
   cursor: pointer;
+  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+  text-underline-offset: 6px;
+  transition: text-decoration-color 400ms;
 }
 
 .nav-about {
@@ -84,17 +91,37 @@
   height: 50px;
   width: 100px;
   cursor: pointer;
+  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+  text-underline-offset: 6px;
+  transition: text-decoration-color 400ms;
+}
+
+.nav-home:hover, .nav-menu:hover, .nav-about:hover {
+  text-decoration: underline 0.10em rgb(217, 229, 255);
 }
 
 .main {
   height: 75%;
 }
 
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 90%;
+}
+
 .footer {
+  font-family: BlackBerryJam;
+  color: rgb(217, 229, 255);
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10%;
+  padding: 10px 0;
+  border-top: 2px solid rgb(217, 229, 255);
+  background-color: rgb(54, 10, 10);
 }
 
 .footer-text {
