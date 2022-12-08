@@ -1,3 +1,13 @@
+@font-face {
+ font-family: 'BlackBerryJam'; 
+ src: url('./fonts/BlackBerryJam.ttf');
+}  
+
+@font-face {
+  font-family: 'Brisket';
+  src: url('./fonts/Brisket.otf');
+}
+  
 * {
   border: 1px dotted red;
   box-sizing: border-box;
@@ -16,38 +26,64 @@
   justify-content: space-around;
   align-items: center;
   height: 15%;
+  background-color: rgb(217, 229, 255);
 }
 
 .logo-container {
-  height: 50px;
-  width: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
+  width: 250px;
+}
+
+.logo {
+  height: 250px;
+  width: 250px;
 }
 
 .name-container {
+  color: rgb(14, 34, 100);
+  font-family: BlackBerryJam;
+  font-size: 90px;
+  text-align: center;
+  margin-right: 60px;
   height: 50px;
-  width: 100px;
+  width: 700px;
+  line-height: 50px;
 }
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-family: Brisket;
+  font-size: 35px;
+  color: rgb(14, 34, 100);
+  margin-top: 50px;
+  line-height: 80px;
   height: 75px;
   width: 500px;
 }
 
 .nav-home {
+  text-align: center;
   height: 50px;
   width: 100px;
+  cursor: pointer;
 }
 
 .nav-menu {
+  text-align: center;
   height: 50px;
   width: 100px;
+  cursor: pointer;
 }
 
 .nav-about {
+  text-align: center;
   height: 50px;
   width: 100px;
+  cursor: pointer;
 }
 
 .main {
