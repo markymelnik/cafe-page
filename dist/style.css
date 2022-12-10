@@ -16,7 +16,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  border: 0;
   padding: 0;
 }
 
@@ -24,19 +23,17 @@
   font-family: Sansation;
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 150px;
   background-color: rgb(8, 16, 36);
   border-bottom: 1px solid white;
   width: inherit;
+  opacity: 85%;
   z-index: 1;
 }
 
@@ -53,9 +50,9 @@
 
 .header-logo {
   font-family: BlackBerryJam;
-  font-size: 60px;
+  font-size: 70px;
   text-align: left;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 .header-logo:hover {
@@ -72,7 +69,7 @@
 
 .header-right-content {
   height: 90%;
-  width: 75%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -82,15 +79,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   padding: 20px;
-  margin-left: 40px;
-  margin-top: 40px;
+  margin-left: 50px;
 }
 
 .nav-home, .nav-menu, .nav-about {
-  margin-right: 40px;
+  margin-right: 50px;
   text-decoration: underline 0.05em rgba(255, 255, 255, 0);
   text-underline-offset: 6px;
   transition: text-decoration-color 400ms;
@@ -102,8 +98,23 @@
   color: rgb(255, 213, 0);
 }
 
+.header-img-container {
+  width: 100px;
+  height: 100%;
+  margin-left: 500px;
+}
+
+.header-img {
+  width: inherit;
+  height: inherit;
+}
+
+.header-img:hover {
+  transform: rotate(-10deg);
+}
+
 .takeout-btn-container {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -129,25 +140,36 @@
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
+.main-background {
+  width: inherit;
   height: 100vh;
   background-color: rgb(108, 172, 255);
   background-blend-mode: multiply;
 }
 
+.background-img-container {
+  width: inherit;
+  height: inherit;
+}
+
 .background-img {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   opacity: 80%;
 }
 
 .welcome-text-container {
-  position: fixed;
-  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome-text {
@@ -164,8 +186,8 @@
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: inherit;
+  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,6 +195,7 @@
   background-color: rgb(8, 16, 36);
   padding: 10px;
   border-top: 1px solid white;
+  opacity: 85%;
 }
 
 .footer-text {
