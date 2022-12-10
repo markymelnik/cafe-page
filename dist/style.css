@@ -7,16 +7,21 @@
   font-family: 'Brisket';
   src: url('./fonts/Brisket.otf');
 }
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('./fonts/Sansation.ttf');
+}
   
 * {
-  border: 1px dotted red;
   box-sizing: border-box;
   margin: 0;
+  border: 0;
   padding: 0;
 }
 
 .container {
-  font-family: Brisket;
+  font-family: Sansation;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -29,7 +34,7 @@
   justify-content: space-between;
   align-items: center;
   height: 150px;
-  background-color: rgb(14, 28, 60);
+  background-color: rgb(8, 16, 36);
   border-bottom: 1px solid white;
   width: inherit;
   z-index: 1;
@@ -43,6 +48,7 @@
   padding: 10px;
   height: 100%;
   margin-left: 40px;
+  transform: rotate(-10deg);
 }
 
 .header-logo {
@@ -50,6 +56,10 @@
   font-size: 60px;
   text-align: left;
   line-height: 40px;
+}
+
+.header-logo:hover {
+  transform: rotate(10deg);
 }
 
 .line-1 {
@@ -60,46 +70,42 @@
   color: rgb(255, 213, 0);
 }
 
+.header-right-content {
+  height: 90%;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .header-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   padding: 20px;
+  margin-left: 40px;
+  margin-top: 40px;
 }
 
-.nav-home {
-  cursor: pointer;
+.nav-home, .nav-menu, .nav-about {
   margin-right: 40px;
-  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
+  text-decoration: underline 0.05em rgba(255, 255, 255, 0);
   text-underline-offset: 6px;
   transition: text-decoration-color 400ms;
-}
-
-.nav-menu {
   cursor: pointer;
-  margin-right: 40px;
-  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
-  text-underline-offset: 6px;
-  transition: text-decoration-color 400ms;
-}
-
-.nav-about {
-  cursor: pointer;
-  margin-right: 40px;
-  text-decoration: underline 0.10em rgba(255, 255, 255, 0);
-  text-underline-offset: 6px;
-  transition: text-decoration-color 400ms;
 }
 
 .nav-home:hover, .nav-menu:hover, .nav-about:hover {
-  text-decoration: underline 0.10em rgb(217, 229, 255);
+  text-decoration: underline 0.05em rgb(255, 213, 0);
+  color: rgb(255, 213, 0);
 }
 
 .takeout-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   margin-right: 40px;
 }
@@ -114,52 +120,63 @@
   text-transform: uppercase;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 
-
-
+.takeout-btn:hover {
+  background-color: rgb(49, 115, 186);
+  transform: rotate(5deg);
+}
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 72%;
-  background-color: rgba(17, 33, 123, 0.317);
+  height: 100vh;
+  background-color: rgb(108, 172, 255);
   background-blend-mode: multiply;
-}
-
-.center-text-container {
-  position: absolute;
-  padding: 10px;
-}
-
-.center-text {
-  font-size: 60px;
-  letter-spacing: 2px;
-  color:rgb(14, 28, 60);
 }
 
 .background-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0%;
+  opacity: 80%;
+}
+
+.welcome-text-container {
+  position: fixed;
+  padding: 10px;
+}
+
+.welcome-text {
+  font-family: Brisket;
+  font-size: 80px;
+  letter-spacing: 2px;
+  color: rgb(8, 16, 36);
+}
+
+.welcome-text:hover {
+  font-size: 90px;
 }
 
 .footer {
-  color: rgb(217, 229, 255);
-  font-size: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
-  padding: 10px 0;
-  background-color: rgb(14, 28, 60);
+  color: rgb(217, 229, 255);
+  background-color: rgb(8, 16, 36);
+  padding: 10px;
   border-top: 1px solid white;
 }
 
 .footer-text {
+  font-size: 20px;
   text-align: center;
-  height: 50px;
+  padding: 10px;
 }
