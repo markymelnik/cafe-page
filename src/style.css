@@ -33,7 +33,7 @@
   background-color: rgb(8, 16, 36);
   border-bottom: 1px solid white;
   width: inherit;
-  opacity: 85%;
+  opacity: 90%;
   z-index: 1;
 }
 
@@ -101,7 +101,7 @@
 .header-img-container {
   width: 100px;
   height: 100%;
-  margin-left: 500px;
+  margin-right: 50px;
 }
 
 .header-img {
@@ -195,7 +195,7 @@
   background-color: rgb(8, 16, 36);
   padding: 10px;
   border-top: 1px solid white;
-  opacity: 85%;
+  opacity: 90%;
 }
 
 .footer-text {
