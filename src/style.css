@@ -26,6 +26,7 @@
 }
 
 .container {
+  position: relative;
   font-family: Sansation;
   width: 100%;
   height: 100vh;
@@ -102,6 +103,7 @@
 .nav-home:hover, .nav-menu:hover, .nav-about:hover {
   text-decoration: underline 0.05em rgb(255, 213, 0);
   color: rgb(255, 213, 0);
+  cursor: pointer;
 }
 
 .header-img-container {
@@ -208,4 +210,64 @@
   font-size: 20px;
   text-align: center;
   padding: 10px;
+}
+
+
+
+
+
+.menu-container {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 600px;
+  text-align: center;
+}
+
+.menu-main-title {
+  font-size: 50px;
+  height: 100px;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.menu-type-titles {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 80%;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.menu-type {
+  font-size: 40px;
+}
+
+.menu-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  height: 80%;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.starters-menu, .entrees-menu, .desserts-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-section-header {
+  font-size: 40px;
+}
+
+.menu-item-header {
+  font-size: 25px;
 }
