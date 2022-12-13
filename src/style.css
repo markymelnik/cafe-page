@@ -155,7 +155,7 @@
 .main-background {
   width: inherit;
   height: 100vh;
-  background-color: var(--background-color);
+  background-color: #fff6C7;
   background-blend-mode: multiply;
 }
 
