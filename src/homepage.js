@@ -24,8 +24,8 @@ function createHeader() {
   headerLogo.append(headerLogoLineOne, headerLogoLineTwo);
   headerLogoContainer.append(headerLogo);
 
-  const headerRightContent = document.createElement('div');
-  headerRightContent.classList.add('header-right-content');
+  const headerNavigationContainer = document.createElement('div');
+  headerNavigationContainer.classList.add('header-navigation-container');
 
   const headerNavigation = document.createElement('div');
   headerNavigation.classList.add('header-navigation');
@@ -43,7 +43,7 @@ function createHeader() {
   navContact.textContent = 'About';
 
   headerNavigation.append(navHome, navMenu, navContact);
-  headerRightContent.append(headerNavigation);
+  headerNavigationContainer.append(headerNavigation);
 
   const headerImgContainer = document.createElement('div');
   headerImgContainer.classList.add('header-img-container');
@@ -65,7 +65,7 @@ function createHeader() {
 
   takeOutBtnContainer.append(takeOutBtn);
 
-  header.append(headerLogoContainer, headerRightContent, headerImgContainer, takeOutBtnContainer)
+  header.append(headerLogoContainer, headerNavigationContainer, headerImgContainer, takeOutBtnContainer)
 
   return header;
 }
@@ -118,9 +118,13 @@ function createFooter() {
 }
 
 function loadHomePage() {
+
   const homePage = document.querySelector('.container');
+
   homePage.append(createHeader(), createMainContent(), createFooter());
+
   return homePage;
+  
 }
 
 export default loadHomePage;

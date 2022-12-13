@@ -1,3 +1,8 @@
+:root {
+  --theme-color: rgb(8, 16, 36);
+  --background-color: rgb(108, 172, 255);
+}
+
 @font-face {
  font-family: 'BlackBerryJam'; 
  src: url('./fonts/BlackBerryJam.ttf');
@@ -15,6 +20,7 @@
   
 * {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
 }
@@ -30,9 +36,9 @@
   display: flex;
   align-items: center;
   height: 150px;
-  background-color: rgb(8, 16, 36);
-  border-bottom: 1px solid white;
   width: inherit;
+  background-color: var(--theme-color);
+  border-bottom: 1px solid white;
   opacity: 90%;
   z-index: 1;
 }
@@ -67,7 +73,7 @@
   color: rgb(255, 213, 0);
 }
 
-.header-right-content {
+.header-navigation-container {
   height: 90%;
   width: 90%;
   display: flex;
@@ -149,7 +155,7 @@
 .main-background {
   width: inherit;
   height: 100vh;
-  background-color: rgb(108, 172, 255);
+  background-color: var(--background-color);
   background-blend-mode: multiply;
 }
 
@@ -186,15 +192,15 @@
 .footer {
   position: fixed;
   bottom: 0;
-  width: inherit;
-  height: 8vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: inherit;
+  height: 8vh;
   color: rgb(217, 229, 255);
-  background-color: rgb(8, 16, 36);
-  padding: 10px;
+  background-color: var(--theme-color);
   border-top: 1px solid white;
+  padding: 10px;
   opacity: 90%;
 }
 
