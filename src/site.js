@@ -118,7 +118,7 @@ function loadWebsite() {
   buttonStatus(navBtn);
 
   loadHomeContent();
-  
+
   return container;
 
 }
