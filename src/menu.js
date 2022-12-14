@@ -1,8 +1,5 @@
-import './style.css';
 
-function loadMenuPage() {
-
-  const container = document.querySelector('.container');
+function createMenuPage() {
 
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menu-container');
@@ -31,7 +28,16 @@ function loadMenuPage() {
 
   menuTypeTitles.append(menuTypeOne, menuTypeTwo, menuTypeThree);
   menuContainer.append(menuMainTitle, menuTypeTitles, menuOptions);
-  container.append(menuContainer);
+
+  return menuContainer;
 }
+
+function loadMenuPage() {
+  const container = document.querySelector('.container');
+  container.append(createMenuPage());
+  return container;
+
+}
+
 
 export default loadMenuPage;

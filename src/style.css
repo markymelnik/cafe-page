@@ -35,6 +35,7 @@
 .header {
   position: fixed;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 150px;
   width: inherit;
@@ -144,27 +145,28 @@
 }
 
 .takeout-btn:hover {
-  background-color: rgb(80, 80, 80);
+  background-color: var(--secondary-color);
+  opacity: 90%;
   transform: rotate(5deg);
 }
 
 .main {
+  height: inherit;
+  width: inherit;
+}
+
+.main-container {
   position: relative;
   display: flex;
   flex-direction: column;
   width: inherit;
 }
 
-.main-background {
-  width: inherit;
-  height: 100vh;
-  background-color: #fff6C7;
-  background-blend-mode: multiply;
-}
-
 .background-img-container {
   width: inherit;
-  height: inherit;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  background-blend-mode: multiply;
 }
 
 .background-img {

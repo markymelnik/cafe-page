@@ -1,6 +1,5 @@
-import './style.css';
 
-function loadAboutPage() {
+function createAboutPage() {
 
   const container = document.querySelector('.container');
 
@@ -12,8 +11,14 @@ function loadAboutPage() {
   aboutInformation.textContent = 'About this restaurant!'
 
   aboutContainer.append(aboutInformation);
-  container.append(aboutContainer);
+  
+  return aboutContainer;
 
+}
+
+function loadAboutPage() {
+  const container = document.querySelector('.container');
+  container.append(createAboutPage());
   return container;
 }
 
