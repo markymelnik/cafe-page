@@ -1,6 +1,6 @@
 :root {
-  --theme-color: rgb(8, 16, 36);
-  --background-color: rgb(108, 172, 255);
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(200, 116, 36);
 }
 
 @font-face {
@@ -38,7 +38,7 @@
   align-items: center;
   height: 150px;
   width: inherit;
-  background-color: var(--theme-color);
+  background-color: var(--primary-color);
   border-bottom: 1px solid white;
   opacity: 90%;
   z-index: 1;
@@ -59,7 +59,8 @@
   font-family: BlackBerryJam;
   font-size: 70px;
   text-align: left;
-  line-height: 50px;
+  line-height: 45px;
+  margin-bottom: 15px;
 }
 
 .header-logo:hover {
@@ -67,11 +68,11 @@
 }
 
 .line-1 {
-  color: rgb(0, 91, 187);
+  color: rgb(255, 255, 255);
 }
 
 .line-2 {
-  color: rgb(255, 213, 0);
+  color: var(--secondary-color);
 }
 
 .header-navigation-container {
@@ -101,8 +102,8 @@
 }
 
 .nav-home:hover, .nav-menu:hover, .nav-about:hover {
-  text-decoration: underline 0.05em rgb(255, 213, 0);
-  color: rgb(255, 213, 0);
+  text-decoration: underline 0.05em var(--secondary-color);
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -131,19 +132,19 @@
 
 .takeout-btn {
   color: white;
-  background-color: rgb(0, 91, 187);
+  background-color: var(--primary-color);
   height: 50px;
   width: 100px;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid white;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .takeout-btn:hover {
-  background-color: rgb(49, 115, 186);
+  background-color: rgb(80, 80, 80);
   transform: rotate(5deg);
 }
 
@@ -184,7 +185,7 @@
   font-family: Brisket;
   font-size: 80px;
   letter-spacing: 2px;
-  color: rgb(8, 16, 36);
+  color: var(--primary-color);
 }
 
 .welcome-text:hover {
@@ -199,8 +200,8 @@
   align-items: center;
   width: inherit;
   height: 8vh;
-  color: rgb(217, 229, 255);
-  background-color: var(--theme-color);
+  color: rgb(255, 255, 255);
+  background-color: var(--primary-color);
   border-top: 1px solid white;
   padding: 10px;
   opacity: 90%;

@@ -1,6 +1,5 @@
 import './style.css';
-import Background from './images/background.jpeg';
-import Heart from './images/heart.png';
+import Background from './images/background.jpg';
 
 function createHeader() {
 
@@ -15,11 +14,11 @@ function createHeader() {
 
   const headerLogoLineOne = document.createElement('div');
   headerLogoLineOne.classList.add('line-1');
-  headerLogoLineOne.textContent = 'Taste of';
+  headerLogoLineOne.textContent = 'Midtown';
 
   const headerLogoLineTwo = document.createElement('div');
   headerLogoLineTwo.classList.add('line-2');
-  headerLogoLineTwo.textContent = 'Ukraine';
+  headerLogoLineTwo.textContent = 'Café';
 
   headerLogo.append(headerLogoLineOne, headerLogoLineTwo);
   headerLogoContainer.append(headerLogo);
@@ -47,13 +46,6 @@ function createHeader() {
 
   const headerImgContainer = document.createElement('div');
   headerImgContainer.classList.add('header-img-container');
-
-  const headerImg = document.createElement('img');
-  headerImg.classList.add('header-img');
-  headerImg.src = Heart;
-  headerImg.alt = 'Blue and yellow heart at top right header';
-
-  headerImgContainer.append(headerImg);
 
   const takeOutBtnContainer = document.createElement('div');
   takeOutBtnContainer.classList.add('takeout-btn-container');
