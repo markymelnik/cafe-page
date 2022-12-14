@@ -27,12 +27,13 @@ function createHomeContent() {
   mainContainer.append(backgroundImgContainer, welcomeTextContainer);
 
   return mainContainer;
+  
 }
 
 function loadHomeContent() {
   const main = document.querySelector('.main');
+  main.innerHTML = '';
   main.append(createHomeContent());
-  return main;
 }
 
 export default loadHomeContent;

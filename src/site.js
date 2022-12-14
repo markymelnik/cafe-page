@@ -1,5 +1,7 @@
 import './style.css';
 import loadHomeContent from "./home";
+import loadMenuContent from "./menu";
+import loadAboutContent from "./about";
 
 function createHeader() {
 
@@ -47,28 +49,39 @@ function createMain() {
 
 function createNavigation() {
 
-  const nav = document.createElement('div');
-  nav.classList.add('header-navigation-container');
-
   const navigationContainer = document.createElement('div');
-  navigationContainer.classList.add('header-navigation');
+  navigationContainer.classList.add('nav-container');
 
-  const navHome = document.createElement('div');
-  navHome.classList.add('nav-home');
-  navHome.textContent = 'Home';
+  const navHomeBtn = document.createElement('div');
+  navHomeBtn.classList.add('nav-btn');
+  navHomeBtn.textContent = 'Home';
+  navHomeBtn.addEventListener('click', (btn) => {
+    if (btn.target.classList.contains('active')) return;
+    buttonStatus(navHomeBtn);
+    loadHomeContent();
+  });
 
-  const navMenu = document.createElement('div');
-  navMenu.classList.add('nav-menu');
-  navMenu.textContent = 'Menu';
+  const navMenuBtn = document.createElement('div');
+  navMenuBtn.classList.add('nav-btn');
+  navMenuBtn.textContent = 'Menu';
+  navMenuBtn.addEventListener('click', (btn) => {
+    if (btn.target.classList.contains('active')) return;
+      buttonStatus(navMenuBtn);
+      loadMenuContent();
+  });
 
-  const navContact = document.createElement('div');
-  navContact.classList.add('nav-about');
-  navContact.textContent = 'About';
+  const navAboutBtn = document.createElement('div');
+  navAboutBtn.classList.add('nav-btn');
+  navAboutBtn.textContent = 'About';
+  navAboutBtn.addEventListener('click', (btn) => {
+    if (btn.target.classList.contains('active')) return;
+      buttonStatus(navAboutBtn);
+      loadAboutContent();
+  });
 
-  navigationContainer.append(navHome, navMenu, navContact);
-  nav.append(navigationContainer);
+  navigationContainer.append(navHomeBtn, navMenuBtn, navAboutBtn);
 
-  return nav;
+  return navigationContainer;
 
 }
 
@@ -86,11 +99,28 @@ function createFooter() {
   return footer;
 }
 
+function buttonStatus(button) {
+  const buttons = document.querySelectorAll('.nav-btn');
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove('active');
+    }
+  })
+  button.classList.add('active');
+};
+
 function loadWebsite() {
+
   const container = document.querySelector('.container');
   container.append(createHeader(), createMain(), createFooter());
+
+  const navBtn = document.querySelector('.nav-btn');
+  buttonStatus(navBtn);
+
   loadHomeContent();
+  
   return container;
+
 }
 
 export default loadWebsite;

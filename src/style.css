@@ -41,7 +41,6 @@
   width: inherit;
   background-color: var(--primary-color);
   border-bottom: 1px solid white;
-  opacity: 90%;
   z-index: 1;
 }
 
@@ -76,25 +75,19 @@
   color: var(--secondary-color);
 }
 
-.header-navigation-container {
+.nav-container {
   height: 90%;
-  width: 90%;
   display: flex;
   justify-content: space-between;
-}
-
-.header-navigation {
-  display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 25px;
   color: white;
   padding: 20px;
-  margin-left: 50px;
+  margin-right: 500px;
 }
 
-.nav-home, .nav-menu, .nav-about {
+.nav-btn {
   margin-right: 50px;
   text-decoration: underline 0.05em rgba(255, 255, 255, 0);
   text-underline-offset: 6px;
@@ -102,25 +95,10 @@
   cursor: pointer;
 }
 
-.nav-home:hover, .nav-menu:hover, .nav-about:hover {
+.nav-btn:hover {
   text-decoration: underline 0.05em var(--secondary-color);
   color: var(--secondary-color);
   cursor: pointer;
-}
-
-.header-img-container {
-  width: 100px;
-  height: 100%;
-  margin-right: 50px;
-}
-
-.header-img {
-  width: inherit;
-  height: inherit;
-}
-
-.header-img:hover {
-  transform: rotate(-10deg);
 }
 
 .takeout-btn-container {
@@ -151,8 +129,9 @@
 }
 
 .main {
-  height: inherit;
-  width: inherit;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
 }
 
 .main-container {
@@ -160,11 +139,12 @@
   display: flex;
   flex-direction: column;
   width: inherit;
+  height: inherit;
 }
 
 .background-img-container {
   width: inherit;
-  height: 100vh;
+  height: inherit;
   background-color: var(--secondary-color);
   background-blend-mode: multiply;
 }
@@ -173,7 +153,7 @@
   width: inherit;
   height: inherit;
   object-fit: cover;
-  opacity: 80%;
+  opacity: 65%;
 }
 
 .welcome-text-container {
@@ -206,7 +186,6 @@
   background-color: var(--primary-color);
   border-top: 1px solid white;
   padding: 10px;
-  opacity: 90%;
 }
 
 .footer-text {

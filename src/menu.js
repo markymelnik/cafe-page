@@ -1,5 +1,4 @@
-
-function createMenuPage() {
+function createMenuContent() {
 
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menu-container');
@@ -30,14 +29,14 @@ function createMenuPage() {
   menuContainer.append(menuMainTitle, menuTypeTitles, menuOptions);
 
   return menuContainer;
+  
 }
 
-function loadMenuPage() {
-  const container = document.querySelector('.container');
-  container.append(createMenuPage());
-  return container;
-
+function loadMenuContent() {
+  const main = document.querySelector('.main');
+  main.innerHTML = '';
+  main.append(createMenuContent());
 }
 
 
-export default loadMenuPage;
+export default loadMenuContent;

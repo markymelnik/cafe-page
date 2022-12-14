@@ -1,7 +1,4 @@
-
-function createAboutPage() {
-
-  const container = document.querySelector('.container');
+function createAboutContent() {
 
   const aboutContainer = document.createElement('div');
   aboutContainer.classList.add('about-container');
@@ -13,13 +10,13 @@ function createAboutPage() {
   aboutContainer.append(aboutInformation);
   
   return aboutContainer;
-
+  
 }
 
-function loadAboutPage() {
-  const container = document.querySelector('.container');
-  container.append(createAboutPage());
-  return container;
+function loadAboutContent() {
+  const main = document.querySelector('.main');
+  main.innerHTML = '';
+  main.append(createAboutContent());
 }
 
-export default loadAboutPage;
+export default loadAboutContent;
