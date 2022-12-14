@@ -271,3 +271,19 @@
 .menu-item-header {
   font-size: 25px;
 }
+
+
+.about-container {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: 600px;
+}
+
+.about-info {
+  font-size: 25px;
+}

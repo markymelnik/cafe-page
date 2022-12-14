@@ -69,4 +69,11 @@ function createHeader() {
   return header;
 }
 
-export default createHeader;
+function loadHeader() {
+  const container = document.querySelector('.container');
+  container.innerHTML = '';
+  container.append(createHeader());
+  return container;
+}
+
+export default loadHeader;
