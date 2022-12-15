@@ -44,7 +44,9 @@ function createHeader() {
 function createMain() {
   const main = document.createElement('div');
   main.classList.add('main');
+  main.append(createFooter());
   return main;
+
 }
 
 function createNavigation() {
@@ -112,7 +114,17 @@ function buttonStatus(button) {
 function loadWebsite() {
 
   const container = document.querySelector('.container');
-  container.append(createHeader(), createMain(), createFooter());
+
+  const topContainer = document.createElement('div');
+  topContainer.classList.add('top-container');
+
+  const bottomContainer = document.createElement('div');
+  bottomContainer.classList.add('bottom-container');
+
+  topContainer.append(createHeader());
+  bottomContainer.append(createMain(), createFooter());
+
+  container.append(topContainer, bottomContainer);
 
   const navBtn = document.querySelector('.nav-btn');
   buttonStatus(navBtn);
